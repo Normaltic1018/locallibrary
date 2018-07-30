@@ -8,7 +8,7 @@
 
   <div style="margin-left:20px;margin-top:20px">
   {% for book in author.book_set.all %}
-  <hr><a href="{% book.get_abolute_url %}">{{ book.title }} ({{ book.bookinstance_set.all.count }})</a>
+  <hr><a href="{{ book.get_abolute_url }}">{{ book.title }} ({{ book.bookinstance_set.all.count }})</a>
   <p>{{ book.summary }}</p>
   {% endfor %}
 </div>
